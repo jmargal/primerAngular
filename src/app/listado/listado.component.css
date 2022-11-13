@@ -1,0 +1,11 @@
+.par{
+    color: green;
+}
+
+.impar{
+    color: red;
+}
+
+.cambiaVisibilidad{
+    visibility: hidden;
+}

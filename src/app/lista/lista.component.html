@@ -1,1 +1,7 @@
 <h1>Lista</h1>
+<ul>
+  <li *ngFor="let item of compra" class="card">
+    <p>Item: {{item.element}}</p>
+    <p>Quantity: {{item.quantity}}</p>
+  </li>
+</ul>

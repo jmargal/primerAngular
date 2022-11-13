@@ -1,0 +1,31 @@
+<h1>Brawl Stars</h1>
+<hr>
+<div class="row">
+  <div class="col">
+    <h3>Characters</h3>
+    <hr>
+    <ul>
+      <li *ngFor="let item of characters;let i =index">
+        <p *ngIf="item.health<1000;" [ngClass]="'red'">
+          {{i+1}} - {{item.name}}:{{item.health}}</p>
+        <p *ngIf="item.health>1000 && item.health<3000;" [ngClass]="'yellow'">
+          {{i+1}} - {{item.name}}:{{item.health}}</p>
+        <p *ngIf="item.health>3000;" [ngClass]="'green'">
+          {{i+1}} - {{item.name}}:{{item.health}}</p>
+        
+        <!-- <p *ngIf="item.health<1000;else green" [ngClass]="'red'">
+          {{i+1}} - {{item.name}}:{{item.health}}</p>
+        
+        <ng-template #green>
+            <p [ngClass]="'green'">
+              {{i+1}} - {{item.name}}:{{item.health}}</p>
+          </ng-template>
+        <ng-template #red>
+          <p [ngClass]="'red'">
+            {{i+1}} - {{item.name}}:{{item.health}}</p>
+        </ng-template> -->
+      </li>
+    </ul>
+  </div>
+
+</div>
